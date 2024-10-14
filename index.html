@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Censor</title>
+    <link rel="stylesheet" href="censor.css">
+</head>
+<body>
+     <section id="sec-1">
+        <div id="word">
+
+            <div id="text">
+                <h1>World Censor App</h1>
+            </div>
+           
+
+            <div id="input-in">
+                <input id="in" autocomplete="off" placeholder="'Hey' hello?" type="text">
+            </div>
+
+            <div id="click">
+                <button  onclick="show()">Censor</button>
+            </div>
+
+            <div id="input-out">
+                <!-- <input id="out" type="text"> -->
+            </div>
+    
+            
+            <button id="reload" onclick="reload()">Reload</button>
+            
+        </div>
+    
+        
+     </section>
+</body>
+</html>
+
+<script>
+
+let divTag = document.getElementById('input-out')
+    let inputTag = document.getElementById('in')
+    function show() {
+        console.log(inputTag.value);
+          divTag.innerHTML = inputTag.value
+    }
+    document.getElementById("reload").onclick = function() {
+            location.reload();
+        };
+</script>
